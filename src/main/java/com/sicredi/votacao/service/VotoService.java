@@ -16,12 +16,20 @@ public class VotoService {
 
     @Autowired
     private SessaoRepository sessaoRepository;
+    
+    @Autowired
+    private AssociadoService associadoService;
 
     public Voto createVoto(Long sessaoId, Long associadoId, Boolean voto) {
         // Busca a sessão pelo ID
         Sessao sessao = sessaoRepository.findById(sessaoId)
                 .orElseThrow(() -> new ResourceNotFoundException("Sessao not found with id " + sessaoId));
-
+        
+     // Verifica se o associado pode votar
+        if (!associadoService.podeVotar(associadoId)) {
+            throw new IllegalStateException("Associado não pode votar.");
+        }
+ 
         // Verifica se o associado já votou nesta sessão pelo ID do associado e ID da sessão
         if (votoRepository.existsBySessaoIdAndAssociadoId(sessao.getId(), associadoId)) {
             throw new IllegalStateException("Associado já votou nesta pauta.");
