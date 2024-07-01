@@ -7,6 +7,17 @@ Aplicação para gerenciar sessões de votação em cooperativas, onde cada asso
 - Java 17
 - Maven
 
+- ## Features
+
+- Criar uma nova pauta
+- Abrir uma sessão de votação para uma pauta
+- Receber votos dos associados
+- Contar os votos e determinar o resultado da votação
+
+## Integração Externa (Bônus)
+
+O aplicativo se integra com um sistema externo para verificar a elegibilidade para votar com base no CPF.
+
 ## Configuração do Projeto
 1. Clone o repositório:
    ```bash
