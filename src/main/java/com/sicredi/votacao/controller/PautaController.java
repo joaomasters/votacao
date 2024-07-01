@@ -7,8 +7,13 @@ import org.springframework.web.bind.annotation.*;
 import com.sicredi.votacao.model.Pauta;
 import com.sicredi.votacao.service.PautaService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 import java.util.List;
 
+@ApiOperation(value = "/api/v1/pautas")
+@Api
 @RestController
 @RequestMapping("/api/v1/pautas")
 public class PautaController {

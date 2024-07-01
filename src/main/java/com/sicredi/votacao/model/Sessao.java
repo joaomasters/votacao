@@ -12,15 +12,17 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 public class Sessao {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @ManyToOne
-    private Pauta pauta;
+	@ManyToOne
+	private Pauta pauta;
 
-    private LocalDateTime dataInicio;
-    private LocalDateTime dataFim;
+	private LocalDateTime dataInicio;
+	private LocalDateTime dataFim;
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -45,6 +47,9 @@ public class Sessao {
 	public void setDataFim(LocalDateTime dataFim) {
 		this.dataFim = dataFim;
 	}
+	
+	
+	
     
     
 }

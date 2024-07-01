@@ -13,15 +13,16 @@ import lombok.Data;
 @Data
 @Entity
 public class Voto {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @ManyToOne
-    private Sessao sessao;
+	@ManyToOne
+	private Sessao sessao;
 
-    private Long associadoId;
-    private Boolean voto; // true for 'Sim', false for 'Não'
+	private Long associadoId;
+	private Boolean voto; 
+	
 	public Long getId() {
 		return id;
 	}
@@ -46,6 +47,6 @@ public class Voto {
 	public void setVoto(Boolean voto) {
 		this.voto = voto;
 	}
-    
+
     
 }

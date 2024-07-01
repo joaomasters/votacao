@@ -12,7 +12,7 @@ import com.sicredi.votacao.service.SessaoService;
 import com.sicredi.votacao.service.VotoService;
 
 @RestController
-@RequestMapping("/api/v2")
+@RequestMapping("/api/v33")
 public class V2VotoController {
 
     @Autowired

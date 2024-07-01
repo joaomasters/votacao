@@ -11,6 +11,7 @@ import java.util.List;
 public interface VotoRepository extends JpaRepository<Voto, Long> {
     boolean existsBySessaoIdAndAssociadoId(Sessao sessao, Long associadoId);
     List<Voto> findBySessaoIdIn(List<Long> sessaoIds);
+    List<Voto> findBySessao(Sessao sessao);
     long countBySessaoAndVoto(Sessao sessao, boolean voto);
 
 }

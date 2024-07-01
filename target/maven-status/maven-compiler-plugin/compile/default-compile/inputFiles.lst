@@ -1,5 +1,3 @@
-C:\Projetos\votacao\src\main\java\com\sicredi\votacao\config\RestTemplateConfig.java
-C:\Projetos\votacao\src\main\java\com\sicredi\votacao\config\SwaggerConfig.java
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\controller\PautaController.java
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\controller\SessaoController.java
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\controller\versao1\V2VotoController.java
@@ -19,7 +17,6 @@ C:\Projetos\votacao\src\main\java\com\sicredi\votacao\repository\PautaRepository
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\repository\SessaoRepository.java
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\repository\VotoRepository.java
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\service\AssociadoService.java
-C:\Projetos\votacao\src\main\java\com\sicredi\votacao\service\CPFVerificationService.java
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\service\PautaService.java
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\service\SessaoService.java
 C:\Projetos\votacao\src\main\java\com\sicredi\votacao\service\VotoService.java

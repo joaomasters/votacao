@@ -8,7 +8,6 @@ import com.sicredi.votacao.model.Sessao;
 import com.sicredi.votacao.model.Voto;
 import com.sicredi.votacao.repository.SessaoRepository;
 import com.sicredi.votacao.repository.VotoRepository;
-import com.sicredi.votacao.service.CPFVerificationService;
 import com.sicredi.votacao.service.VotoService;
 
 import org.junit.jupiter.api.Test;
