@@ -43,7 +43,7 @@ public class VotoServiceTest {
         sessao.setId(sessaoId);
 
         when(sessaoRepository.findById(sessaoId)).thenReturn(Optional.of(sessao));
-        when(votoRepository.existsBySessaoIdAndAssociadoId(sessao, associadoId)).thenReturn(false);
+        when(votoRepository.existsBySessaoIdAndAssociadoId(sessao.getId(), associadoId)).thenReturn(false);
 
         Voto novoVoto = new Voto();
         novoVoto.setSessao(sessao);

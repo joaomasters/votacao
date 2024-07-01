@@ -5,13 +5,10 @@ import com.sicredi.votacao.model.Sessao;
 import com.sicredi.votacao.model.Voto;
 import com.sicredi.votacao.repository.SessaoRepository;
 import com.sicredi.votacao.repository.VotoRepository;
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
 public class VotoService {
 
     @Autowired
@@ -21,18 +18,22 @@ public class VotoService {
     private SessaoRepository sessaoRepository;
 
     public Voto createVoto(Long sessaoId, Long associadoId, Boolean voto) {
+        // Busca a sessão pelo ID
         Sessao sessao = sessaoRepository.findById(sessaoId)
                 .orElseThrow(() -> new ResourceNotFoundException("Sessao not found with id " + sessaoId));
 
-        if (votoRepository.existsBySessaoIdAndAssociadoId(sessao, associadoId)) {
+        // Verifica se o associado já votou nesta sessão pelo ID do associado e ID da sessão
+        if (votoRepository.existsBySessaoIdAndAssociadoId(sessao.getId(), associadoId)) {
             throw new IllegalStateException("Associado já votou nesta pauta.");
         }
 
+        // Cria um novo voto
         Voto novoVoto = new Voto();
         novoVoto.setSessao(sessao);
-        novoVoto.setAssociadoId(associadoId);
+        novoVoto.setAssociadoId(associadoId); // Associado é associado ao voto
         novoVoto.setVoto(voto);
 
+        // Salva o voto no banco de dados
         return votoRepository.save(novoVoto);
     }
 
