@@ -46,10 +46,6 @@ public class Sessao {
 	}
 	public void setDataFim(LocalDateTime dataFim) {
 		this.dataFim = dataFim;
-	}
-	
-	
-	
-    
+	} 
     
 }

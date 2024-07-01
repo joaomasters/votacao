@@ -1,6 +1,3 @@
-com\sicredi\votacao\service\test\VotoServiceTest.class
-com\sicredi\votacao\service\test\SessaoServiceTest.class
+com\sicredi\votacao\controller\test\PautaControllerTest.class
 com\sicredi\votacao\controller\test\VotoControllerTest.class
-com\sicredi\votacao\integration\test\VotacaoIntegrationTest.class
-com\sicredi\votacao\repository\test\PautaRepositoryTest.class
 com\sicredi\votacao\VotacaoApplicationTests.class

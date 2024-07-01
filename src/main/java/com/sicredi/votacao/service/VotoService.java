@@ -5,10 +5,13 @@ import com.sicredi.votacao.model.Sessao;
 import com.sicredi.votacao.model.Voto;
 import com.sicredi.votacao.repository.SessaoRepository;
 import com.sicredi.votacao.repository.VotoRepository;
+
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Service
 public class VotoService {
 
     @Autowired
@@ -56,4 +59,12 @@ public class VotoService {
                 .orElseThrow(() -> new ResourceNotFoundException("Sessao not found with id " + sessaoId));
         return votoRepository.countBySessaoAndVoto(sessao, voto);
     }
+
+	public List<Voto> getAllVotes() {
+		return null;
+	}
+
+	public Voto castVote(Voto vote) {
+		return null;
+	}
 }

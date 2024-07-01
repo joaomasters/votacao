@@ -17,6 +17,9 @@ public class AssociadoService {
 
     private final RestTemplate restTemplate = new RestTemplate();
     private static final String USER_INFO_API_URL = "https://user-info.herokuapp.com/users/";
+    private static final String ABLE_TO_VOTE = "ABLE_TO_VOTE";
+    private static final String UNABLE_TO_VOTE = "UNABLE_TO_VOTE";
+
 
     public Associado createAssociado(Associado associado) {
         return associadoRepository.save(associado);
@@ -30,9 +33,9 @@ public class AssociadoService {
 
         try {
             ResponseEntity<String> response = restTemplate.getForEntity(USER_INFO_API_URL + cpf, String.class);
-            if (response.getBody().contains("ABLE_TO_VOTE")) {
+            if (response.getBody().contains(ABLE_TO_VOTE)) {
                 return true;
-            } else if (response.getBody().contains("UNABLE_TO_VOTE")) {
+            } else if (response.getBody().contains(UNABLE_TO_VOTE)) {
                 return false;
             } else {
                 throw new IllegalStateException("Resposta inesperada do serviço externo");
