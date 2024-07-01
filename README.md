@@ -21,7 +21,7 @@ O aplicativo se integra com um sistema externo para verificar a elegibilidade pa
 ## Configuração do Projeto
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/voting-app.git
+   git clone (https://github.com/joaomasters/votacao)
    cd voting-app
 
 mvn clean install
