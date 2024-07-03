@@ -18,13 +18,6 @@ public class VotoController {
 
     @Autowired
     private VotoService votoService;
-
-//    @ApiOperation(value = "Cria um novo voto para a sessão")
-//    @PostMapping("/sessoes/{sessaoId}")
-//    public ResponseEntity<Voto> createVoto(@PathVariable Long sessaoId, @RequestBody Voto voto) {
-//        Voto createdVoto = votoService.createVoto(sessaoId, voto.getAssociadoId(), voto.getVoto());
-//        return ResponseEntity.status(HttpStatus.CREATED).body(createdVoto);
-//    }
     
     @PostMapping("/sessoes/{sessaoId}")
     public ResponseEntity<Voto> createVoto(@PathVariable Long sessaoId, @RequestBody Voto voto) {
